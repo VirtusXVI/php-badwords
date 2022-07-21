@@ -9,11 +9,20 @@
 <body>
     
     <?php
-        $myText = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus iure eveniet, vero quis voluptate ipsum ab corporis. Voluptatum, tempore rem expedita ducimus voluptas impedit ipsum molestias natus rerum sit dolore?";
+        $myText = "Lorem ipsum";
         $badWord = $_GET['badword'];
+        $myTextLength = strlen($myText);
         $replacedText = str_replace($badWord,"***",$myText);
-        echo $replacedText;
+        $replacedTextLength = strlen($replacedText);
     ?>
-
+    <div>
+        Stringa: <?php echo $myText . " / Lunghezza: " . $myTextLength; ?>
+    </div>
+    <div>
+        -------------------------------------------------
+    </div>
+    <div>
+        Stringa Modificata: <?php echo $replacedText . " / Lunghezza: " . $replacedTextLength; ?>
+    </div>
 </body>
 </html>
